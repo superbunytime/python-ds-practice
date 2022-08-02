@@ -13,3 +13,13 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+    x = [i for i in range(num)]
+    x.pop(x[0])
+    y = []
+    for i in x:
+        if num % i == 0:
+            y.append(i)
+    y.append(num)
+    return y
+
+#comprehensions are scary
